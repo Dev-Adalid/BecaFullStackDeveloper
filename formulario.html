@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos personales</title>
+        <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .required::after {
+            content: " *";
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            background-color: #f0f0f0;
+            color: #333333;
+            font-size: 16px;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555555;
+        }
+
+        .btn-toggle {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 20px;
+            background-color: #f39c12;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-toggle:hover {
+            background-color: #e67e22;
+        }
+
+        .body-2.contrast {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .contrast .container {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        .contrast h1,
+        .contrast label {
+            color: #ffffff;
+        }
+
+        .contrast input[type="text"],
+        .contrast input[type="email"],
+        .contrast textarea,
+        .contrast input[type="date"] {
+            background-color: #555555;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+        }
+
+        .contrast input[type="submit"],
+        .contrast .btn-toggle {
+            background-color: #f39c12;
+            color: #ffffff;
+        }
+
+        .contrast input[type="submit"]:hover,
+        .contrast .btn-toggle:hover {
+            background-color: #e67e22;
+        }
+
+        ::placeholder {
+            color: #888888;
+        }
+
+        .contrast ::placeholder {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="body-2">
+
+<div class="container">
+    <h1>Formulario de Datos personales</h1>
+    <form action="#" method="post">
+        <label for="nombre" class="required">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre (obligatorio)" aria-required="true" aria-label="Nombre (requerido)" required><br><br>
+
+        <label for="apellido" class="required">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido (obligatorio)" aria-required="true" aria-label="Apellido (requerido)" required><br><br>
+
+        <label for="email" class="required">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Ingrese su email (obligatorio)" aria-required="true" aria-label="Email (requerido)" required><br><br>
+
+        <label for="fecha_nacimiento" class="required">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" aria-required="true" aria-label="Fecha de Nacimiento (requerido)" required><br><br>
+
+        <label for="pais_residencia" class="required">País de Residencia:</label>
+        <input type="text" id="pais_residencia" name="pais_residencia" placeholder="Ingrese su país de residencia (obligatorio)" aria-required="true" aria-label="País de Residencia (requerido)" required><br><br>
+
+        <label for="mensaje" class="required">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ingrese su mensaje (obligatorio)" aria-required="true" aria-label="Mensaje (requerido)" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+
+<button class="btn-toggle" onclick="toggleContrast()">Activar modo Alto Contraste</button>
+
+
+<p class="text-center">
+    <a href="ejercicios.html" class="btn btn-primary btn-lg">Volver a los Ejercicios</a>
+</p>
+
+<script>
+    function toggleContrast() {
+        document.body.classList.toggle('contrast');
+        const button = document.querySelector('.btn-toggle');
+        if (document.body.classList.contains('contrast')) {
+            button.textContent = 'Desactivar modo Alto Contraste';
+        } else {
+            button.textContent = 'Activar modo Alto Contraste';
+        }
+    }
+</script>
+
+</body>
+</html>

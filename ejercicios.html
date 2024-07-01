@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios - Bootstrap Full Stack Developer</title>
+    <!-- Incluir Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+        body {
+            position: relative;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h5 {
+            background-color: #f8f8f8;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .table {
+            margin-bottom: 20px;
+        }
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            background-color: #343a40;
+        }
+        .list-group-item {
+            cursor: pointer;
+        }
+        /* Estilos adicionales para el menú fijo */
+        .sidebar {
+            height: calc(100vh - 56px); /* Altura máxima ajustada para evitar que el menú ocupe más allá del tamaño de la ventana */
+            overflow-y: auto; /* Permite desplazarse dentro del menú si hay más elementos */
+            position: fixed; /* Fijar el menú en la posición deseada */
+            top: 56px; /* Espacio desde la parte superior (ajusta según el tamaño de tu navbar) */
+            left: 0;
+            width: 200px; /* Ancho deseado del menú */
+            padding-top: 10px; /* Espaciado desde la parte superior */
+        }
+
+        
+    </style>
+</head>
+<body data-spy="scroll " data-target="#navbarNav">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">Ejercicios Bootstrap Full Stack Developer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido de la página de ejercicios -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Menú lateral fijo -->
+            <nav class="col-md-3 col-lg-2 d-none d-md-block bg-light sidebar">
+                <div class="list-group">
+                    <a href="#clase3" class="list-group-item list-group-item-action">Clase 3</a>
+                    <a href="#clase2" class="list-group-item list-group-item-action">Clase 2</a>
+                    <a href="#clase1" class="list-group-item list-group-item-action">Clase 1</a>
+                </div>
+            </nav>
+
+            <!-- Contenido principal -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="container" id="clase3">
+                    <h1>Clase 3: Comparación de Servicios de Hosting</h1>
+
+                    <!-- Contenido de la clase 1 -->
+                    <h5>000webhost</h5>
+                    <p><strong>Gratuito:</strong> Sí</p>
+                    <p><strong>Limitaciones:</strong></p>
+                    <ul>
+                        <li>1 sitio web</li>
+                        <li>300 MB de almacenamiento</li>
+                        <li>3 GB de ancho de banda/mes</li>
+                        <li>Visitantes limitados</li>
+                        <li>Sin publicidad</li>
+                    </ul>
+                    <p><strong>Modelo de Pago:</strong> Ofrece planes de pago a través de Hostinger en USD o Peso argentino</p>
+                    <p><strong>Planes de Pago:</strong></p>
+                    <ul>
+                        <li><strong>Single Shared Hosting:</strong> $1999 ARG</li>
+                        <ul>
+                            <li>1 sitio web</li>
+                            <li>50 GB de almacenamiento SSD</li>
+                            <li>100 GB de ancho de banda</li>
+                            <li>2 bases de datos MySQL</li>
+                        </ul>
+                        <li><strong>Premium Shared Hosting:</strong> $3899/mes</li>
+                        <ul>
+                            <li>Sitios web ilimitados</li>
+                            <li>Almacenamiento SSD ilimitado</li>
+                            <li>Ancho de banda ilimitado</li>
+                            <li>Bases de datos ilimitadas</li>
+                        </ul>
+                    </ul>
+
+                    <h5>InfinityFree</h5>
+                    <p><strong>Gratuito:</strong> Sí</p>
+                    <p><strong>Limitaciones:</strong></p>
+                    <ul>
+                        <li>Sitios web ilimitados</li>
+                        <li>Almacenamiento ilimitado</li>
+                        <li>Ancho de banda ilimitado</li>
+                        <li>400 bases de datos MySQL</li>
+                        <li>Sin publicidad</li>
+                    </ul>
+                    <p><strong>Modelo de Pago:</strong> Ofrece planes de pago a través de iFastNet en USD</p>
+                    <p><strong>Planes de Pago:</strong></p>
+                    <ul>
+                        <li><strong>Super Premium:</strong> $4.99/mes</li>
+                        <ul>
+                            <li>Sitios web ilimitados</li>
+                            <li>Almacenamiento ilimitado</li>
+                            <li>Ancho de banda ilimitado</li>
+                            <li>Dominio gratuito por el primer año</li>
+                        </ul>
+                        <li><strong>Ultimate Premium:</strong> $7.99/mes</li>
+                        <ul>
+                            <li>Todas las características del plan Super Premium</li>
+                            <li>Mayor potencia de procesamiento y recursos adicionales</li>
+                        </ul>
+                    </ul>
+
+                    <h5>Comparación</h5>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Característica</th>
+                                    <th>000webhost</th>
+                                    <th>InfinityFree</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Gratuito</td>
+                                    <td>Sí</td>
+                                    <td>Sí</td>
+                                </tr>
+                                <tr>
+                                    <td>Limitaciones del plan gratuito</td>
+                                    <td>1 sitio web, 300 MB de almacenamiento, 3 GB/mes</td>
+                                    <td>Sitios web ilimitados, almacenamiento y ancho de banda ilimitados</td>
+                                </tr>
+                                <tr>
+                                    <td>Modelo de pago</td>
+                                    <td>Ofrece planes económicos en USD O Peso argentino</td>
+                                    <td>Ofrece opciones de pago en USD O Peso argentino</td>
+                                </tr>
+                                <tr>
+                                    <td>Planes de pago</td>
+                                    <td>Desde AR$5399/mes hasta AR$5399/mes</td>
+                                    <td>Desde $4.99/mes hasta $7.99/mes</td>
+                                </tr>
+                                <tr>
+                                    <td>Almacenamiento</td>
+                                    <td>Variado (desde 300 MB hasta ilimitado)</td>
+                                    <td>Ilimitado en todos los planes de pago</td>
+                                </tr>
+                                <tr>
+                                    <td>Ancho de banda</td>
+                                    <td>Variado (desde 3 GB/mes hasta ilimitado)</td>
+                                    <td>Ilimitado en todos los planes de pago</td>
+                                </tr>
+                                <tr>
+                                    <td>Bases de datos</td>
+                                    <td>Limitado en el plan gratuito</td>
+                                    <td>400 bases de datos MySQL en el plan gratuito</td>
+                                </tr>
+                                <tr>
+                                    <td>Publicidad</td>
+                                    <td>Sin publicidad</td>
+                                    <td>Sin publicidad</td>
+                                </tr>
+                                <tr>
+                                    <td>Dominio gratuito</td>
+                                    <td>Incluido en algunos planes de pago</td>
+                                    <td>Incluido en algunos planes de pago</td>
+                                </tr>
+                                <tr>
+                                    <td>Soporte</td>
+                                    <td>Foro comunitario y tutoriales</td>
+                                    <td>Soporte proporcionado por iFastNet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Clase 2 -->
+                <div class="container" id="clase2">
+                    <h1>Clase 2: Actividad en Desarrollo</h1>
+                    <p>Contenido de la clase 2...</p>
+                   
+                </div>
+
+                <!-- Clase 3 -->
+                <div class="container  " id="clase1">
+                    <h1>Clase 1: Actividad en Desarrollo</h1>
+                    <p>Contenido de la clase 1...</p>
+                    <p class="text-center">
+                        <a href="formulario.html" class="btn btn-primary btn-lg">Formulario</a>
+                    </p>
+                  
+    </div>
+   
+    <!-- Incluir Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

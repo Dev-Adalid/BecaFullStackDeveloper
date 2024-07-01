@@ -1,0 +1,123 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .required::after {
+            content: " *";
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            background-color: #f0f0f0;
+            color: #333333;
+            font-size: 16px;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555555;
+        }
+
+        .btn-toggle {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 20px;
+            background-color: #f39c12;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-toggle:hover {
+            background-color: #e67e22;
+        }
+
+        .container .contrast {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .contrast .containerclaseuno {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        .contrast h1,
+        .contrast label {
+            color: #ffffff;
+        }
+
+        .contrast input[type="text"],
+        .contrast input[type="email"],
+        .contrast textarea,
+        .contrast input[type="date"] {
+            background-color: #555555;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+        }
+
+        .contrast input[type="submit"],
+        .contrast .btn-toggle {
+            background-color: #f39c12;
+            color: #ffffff;
+        }
+
+        .contrast input[type="submit"]:hover,
+        .contrast .btn-toggle:hover {
+            background-color: #e67e22;
+        }
+
+        ::placeholder {
+            color: #888888;
+        }
+
+        .contrast ::placeholder {
+            color: #ffffff;
+        }
